@@ -1,106 +1,35 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Undangan Khitan Aulian</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #fefcf8;
-      color: #333;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-    section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-    h1, h2 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 1rem;
-    }
-    .hero {
-      background: url('https://source.unsplash.com/1600x900/?islamic,mosque') center/cover no-repeat;
-      color: white;
-    }
-    .gallery img {
-      width: 100%; max-width: 300px; margin: 1rem; border-radius: 10px;
-    }
-    .floating-img {
-      position: absolute;
-      width: 100px;
-      animation: float 6s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-    form {
-      display: flex; flex-direction: column; width: 100%; max-width: 400px;
-    }
-    input, textarea {
-      margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc;
-    }
-    iframe { width: 100%; height: 300px; border: none; }
-  </style>
+    <title>Undangan Pernikahan</title>
+    <style>
+        body {
+            background-image: url('latar.jpg');
+            background-size: cover;
+            text-align: center;
+            font-family: sans-serif;
+            color: white;
+        }
+        audio {
+            width: 100%;
+        }
+        video {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="https://kyanodigital.com/wp-content/uploads/2022/01/02.-Sound_Khitan-ROQQOT-AINA.mp3" type="audio/mpeg">
-  </audio>
-
-  <section class="hero">
-    <h1>Undangan Khitan</h1>
-    <h2>Aulian Lutfan Ghayadi</h2>
-    <p>Minggu, 12 Mei 2025 - Jl. Contoh No. 123</p>
-  </section>
-
-  <section>
-    <h2>Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i</h2>
-    <p>Untuk menghadiri acara khitanan putra kami</p>
-    <h2><strong>Aulian Lutfan Ghayadi</strong></h2>
-  </section>
-
-  <section class="gallery">
-    <h2>Galeri Foto</h2>
-    <img src="https://source.unsplash.com/300x300/?child" alt="Foto Aulian">
-    <img src="https://source.unsplash.com/300x300/?family" alt="Keluarga">
-    <img src="https://source.unsplash.com/300x300/?celebration" alt="Acara">
-  </section>
-
-  <section>
-    <h2>Lokasi Acara</h2>
-    <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Jl+Contoh+No+123"></iframe>
-  </section>
-
-  <section>
-    <h2>Buku Tamu</h2>
-    <form action="rsvp.php" method="POST">
-      <input type="text" name="nama" placeholder="Nama Anda" required>
-      <input type="text" name="kontak" placeholder="Nomor HP">
-      <textarea name="ucapan" placeholder="Ucapan / Doa" required></textarea>
-      <button type="submit">Kirim</button>
-    </form>
-  </section>
-
-  <img src="https://i.ibb.co/FbZx9vM/islamic-deco.png" class="floating-img" style="top:20px; left:20px;">
-  <img src="https://i.ibb.co/FbZx9vM/islamic-deco.png" class="floating-img" style="bottom:20px; right:20px;">
-
-  <script>
-    // Auto-scroll
-    let y = 0;
-    setInterval(() => {
-      y += 1;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }, 100);
-  </script>
+    <h1>Anda Diundang!</h1>
+    <p>Pernikahan [Nama Pengantin Wanita] & [Nama Pengantin Pria]</p>
+    <p>Tanggal: [Tanggal Pernikahan]</p>
+    <p>Lokasi: [Lokasi Pernikahan]</p>
+    <a href="[Link Google Maps]">Lihat Peta</a>
+    <img src="foto-pengantin.jpg" alt="Foto Pengantin" width="300">
+    <audio controls>
+        <source src="musik.mp3" type="audio/mpeg">
+    </audio>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
 </body>
 </html>
